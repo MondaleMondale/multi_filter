@@ -13,10 +13,10 @@ function filterOn(objToFilterOn, objOfFilters) {
 
   return objToFilterOn.filter(myFilter);
 
-  function myFilter(animal) {
+  function myFilter(obj) {
     let arrOfBooleans = [];
     arrayOfPropNames.forEach((element, i) => {
-      arrOfBooleans.push(animal[arrayOfPropNames[i]] === (objOfFilters[arrayOfPropNames[i]] === null ? animal[arrayOfPropNames[i]] : objOfFilters[arrayOfPropNames[i]]));
+      arrOfBooleans.push(obj[arrayOfPropNames[i]] === (objOfFilters[arrayOfPropNames[i]] === null ? obj[arrayOfPropNames[i]] : objOfFilters[arrayOfPropNames[i]]));
     });
 
     return !arrOfBooleans.includes(false);
