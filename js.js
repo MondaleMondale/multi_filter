@@ -11,8 +11,8 @@ let myObjects = [
 function filterOn(objToFilterOn, objOfFilters) {
   const arrayOfPropNames = Object.getOwnPropertyNames(objOfFilters);
 
-  const returnVal = objToFilterOn.filter(myFilter);
-  return returnVal;
+  return objToFilterOn.filter(myFilter);
+
   function myFilter(animal) {
     let arrOfBooleans = [];
     arrayOfPropNames.forEach((element, i) => {
