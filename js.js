@@ -25,13 +25,13 @@ let myObjects = [
 // console.log(filterOn(myObjects, { name: "Pepe", type: null, color: "green" }));
 
 function filterOn(objToFilterOn, objOfFilters) {
-  const arrayOfPropNames = Object.keys(objOfFilters);
+  const keys = Object.keys(objOfFilters);
 
   return objToFilterOn.filter(myFilter);
 
   function myFilter(obj) {
-    for (let i in arrayOfPropNames) {
-      if (obj[arrayOfPropNames[i]] !== objOfFilters[arrayOfPropNames[i]]) {
+    for (let i in keys) {
+      if (obj[keys[i]] !== objOfFilters[keys[i]]) {
         return false;
       }
     }
